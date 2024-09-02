@@ -1,0 +1,266 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: #403B4A;background:-webkit-linear-gradient(to right,#E7E9BB, #403B4A);background:linear-gradient(to right,#E7E9BB,#403B4A);
+  color: #fff;
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.search {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  color: #222;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 30px;
+  background: #e0fcf8;
+}
+
+.fa-solid {
+  font-size: 120px;
+  margin-top: 2.5rem;
+}
+.temp{
+  font-size: 8px;
+  margin-bottom: 5px;
+}
+
+.humi {
+  width: 130px;
+}
+
+.weather-icons {
+  width: 150px; /* Adjust image size */
+  margin: 30px auto; /* Center the image */
+  display: block; /* Ensure it centers properly */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.weather-icons:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 550px) {
+  .weather-icons {
+    width: 100px; /* Reduce size on smaller screens */
+    margin: 20px auto; /* Adjust margin for better spacing */
+  }
+}
+
+.weather h1.temp {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+
+@media (max-width: 550px) {
+  .search input {
+    width: auto;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 50px auto 0;
+  }
+
+  .fa-solid {
+    font-size: 80px;
+    margin-top: 1.5rem;
+  }
+
+  .weather h1.temp {
+    font-size: 60px;
+  }
+
+  .weather h2 {
+    font-size: 35px;
+  }
+
+  .details {
+    margin-left: 0px;
+    justify-content: space-between;
+  }
+
+  .humidity {
+    width: 8px;
+  }
+  .humi{
+    width: 7px;
+  }
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+@media (max-width: 550px) {
+  .card {
+    padding: 15px;
+  }
+
+  .search input {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .search button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .search button img {
+    width: 20px;
+  }
+
+  .fa-solid {
+    font-size: 70px;
+    margin-top: 1.5rem;
+  }
+
+  .weather h1.temp {
+    font-size: 50px;
+  }
+
+  img .weather h2 {
+    font-size: 20px;
+    margin-top: 1.5rem;
+  }
+
+  .col img {
+    width: 40px;
+  }
+
+  .humidity, .wind {
+    font-size: 14px;
+  }
+  .weather-icons {
+    font-size: 30px;
+    margin-top: 1.5rem;
+  }
+ 
+
+}
+
+/* Details Section */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0; /* Spacing between sections */
+  padding: 0 20px; /* Padding on the sides */
+  margin-bottom: 5px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+}
+
+.col img {
+  width: 50px; /* Adjust image size */
+  margin-right: 15px; /* Space between image and text */
+}
+
+.humidity, .wind {
+  font-size: 24px;
+  font-weight: 500; /* Slightly bolder text */
+  margin-bottom: 5px; /* Space between the text and label */
+}
+
+.col div p {
+  font-size: 14px; /* Label text (e.g. Humidity, Wind Speed) */
+  color: #e0fcf8; /* Lighter color for label text */
+  margin: 0;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 550px) {
+  .details {
+    flex-direction: row; /* Stack columns vertically */
+    align-items: flex-start;
+    padding: 0 10px; /* Reduce padding on smaller screens */
+  }
+
+  .col {
+    margin-bottom: 15px; /* Add space between stacked columns */
+  }
+
+  .col img {
+    width: 40px; /* Reduce image size */
+    margin-right: 10px;
+  }
+
+  .humidity, .wind {
+    font-size: 20px;
+  }
+
+  .col div p {
+    font-size: 12px;
+  }
+}
+
+.tag{
+  background: #780206;background: -webkit-linear-gradient(to right, #061161,#780206);background:linear-gradient(to right,#061161, #780206);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-left: 50%;
+}
+  
+ 
